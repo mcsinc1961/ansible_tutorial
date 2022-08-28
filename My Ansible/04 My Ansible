@@ -4,13 +4,14 @@ ansible all --key-file ~/.ssh/ansible -i inventory -m ping
 
 -M CHECK FO ALL MODULES , KernelCare , 
 -------------------------------------------------------------------------------
-AUTOMATION 	ansible_tutorial Directory
+AOTOMATION 	ansible_tutorial Directory
 nano ansible.cfg
-invertory = invintory <the inventory file name inventory>
-private_key_file = ~/.ssh/ansible	| SAVE/EXIT
+ivertory = invintory 		< the inventory file name is inventory >
+Private_key_file = ~/.ssh/ansible	| SAVE/EXIT
 	
 	ls /etc/ansible
 	ansible all -i inventory -m ping
+------------------------------------------------------------------------------	
 	
 	
 	
