@@ -1,0 +1,81 @@
+change name from main to monster
+
+git branch -m main monster
+git fetch origin
+git branch -u origin/monster monster
+git remote set-head origin -a
+
+
+change name from main to monster
+
+git branch -m main 
+git fetch origin
+git branch -u origin/main
+git remote set-head origin -a
+
+clear github history
+
+    Checkout. git checkout --orphan latest_branch.
+    Add all the files. git add -A.
+    Commit the changes. git commit -am "commit message"
+    Delete the branch. git branch -D main.
+    Rename the current branch to main. git branch -m main.
+    Finally, force update your repository. git push -f origin main.
+______________________________________________________________________________
+
+Can you delete history from github?
+If you commit sensitive data, such as a password or SSH key into a Git repository, you can remove it from the history. To entirely remove unwanted files from a repository's history you can use either the git filter-repo tool or the BFG Repo-Cleaner open source tool.
+
+git filter-repo tool
+
+
+
+GIT HUB ANSIBLE i had to accounts mikexalex43123 mcsinc1961 --- 1961 works why?
+
+which git 	---sudo apt install git on the workstation
+git profile 	---gpg keys	--- del dfault 	--- add mikey to new ssh
+cat .ssh/id_ed25519.pub
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMaGBowaRB3MPPrkGJp4osSpsgoYQ+N3lwzobOPc7mAB  Mikey 
+
+ssh -T -p22 git@github.com				TEST PORT 22
+
+ansible_tutor	---CODE copy -https://github.com/mcsinc1961/ansible_tutorial.git	---enter
+ls 	---ansible_tutorial	---
+----------------------------------------------------------------------------------------------
+Tell git who and our email we are
+git config --global user.name "Mike Alex"
+git config --global user.email "mikealex43123@gmail.com"
+cat ~/.gitconfig
+nano README.md - make a change to file -save-exit	
+git status	git diff README.md	git add README.md 	git status	
+git commit -m "update readme.md" 	--- git status 		--- check GITHUB status
+git push orgin master
+tutorial
+
+ssha .ssh/id_ed25519.pub
+ls -al ~/.ssh
+
+ ssh -T -p22 git@github.com
+
+mik3@Problemchild:~/ansible_tutorial$ 
+	git clone https://github.com/mikalex43123/ansible_tutorial.git
+ssha
+git push -f origin master git@github.com:mcsinc1961/ansible_tutorial.git
+
+git clone git@github.com:mcsinc1961/ansible_tutorial.git
+
+ sudo iptables -L 
+ sudo iptables -I INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+ journalctl -xe
+https://github.com/mcsinc1961/ansible_tutorial.git
+git@github.com:mcsinc1961/ansible_tutorial.git
+gh repo clone mcsinc1961/ansible_tutorial
+sudo service ssh status
+
+UFW
+sudo netstat -ltnp | grep sshd
+sudo ufw allow port /tcp
+sudo ufw reload			
+								sudo apt install arping
+ping <ip-address>
