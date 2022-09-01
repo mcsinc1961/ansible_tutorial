@@ -2,3 +2,19 @@
  1. plays
  2. task and modules
  3. playbook runs
+ 
+ Ansible Navagator
+  2E tui = text baqsed interface needs installed : try
+  collections		explore avail collect
+  config		explore anexplre current avail configuration
+  doc <plugin>    	Review documents for a module or plugin
+  help			view main help page
+  images		explore exec enviro images
+  invetory -i >inventory>	explore an inventory
+  log			view application log
+  open			open current page in the editor
+  replay		rxpore previous run using a playbook artiface
+  run <plazybook> -i <iinventory>	run a playbook in interactive mode
+  quit			quit yhe application
+  
+  
