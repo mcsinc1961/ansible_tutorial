@@ -1,0 +1,100 @@
+
+From Ansible Trainning
+
+Ansible playbook you running A nsible coreonder the hooid
+Ansible automation platform yor interacting with core same to execute playbook
+Community & Autonatio 
+ANSIBLE CORE PLUSE THE COLLECTIOM
+Community  is command line only
+Automaton is all components are ope source 
+---
+
+- name: install and start apache2
+  host: web
+  become: yes
+  
+  tasks::
+    - name: htpd package is persent
+      yum:
+        name: httpd
+        state: test---
+        
+     - name: laste index.html file is present
+       templete:
+         src: files/index.html
+         dest /var/www/html/
+                  
+     - name: httpd is started
+       service:
+       name: httpd
+       sxtate: started
+       
+       {{ some_var | to _nice_json}}
+       {{ some_var | to _nice_json}}
+       
+ INVENTORY 
+ The systems that a playbook runs against, autoomation is executed againest
+  [web]
+  websrver1.example1.com        
+  websrver1.example1.com        
+
+  [db]
+  dbserrver1.example.com
+  
+  [switches]		we dont install httpd to a switch
+  leaf01.internal.com
+  leaf01.internal.com
+  
+  ANSIBLE ROLES can be stored into a collection, resuable in a playbook.
+  Written once, and share them with others who has simular challanges.
+  15 plus roles
+  Role to setup control node , setup hosted nodes, create logins, for multiple plays in a playbook. 
+  
+  ---
+  - name: install and start apache
+    hosts: web
+    roles:
+      - common
+      - webservers
+  
+  COLLECTION are Simplified & content delivery, they are data structure containing automation content
+  CISCO, EOS, NETAPP, 
+  MODULES, PLAYBOOKS, ROLES, PLUGINS, DOCS, TEST
+  
+EE - AUTOMATION EXECUTION ENVIROMENTS = Cdollections, Lirraries, Ansible Core
+
+BUILD, CREATE, PUBLISH  
+ 1. Content Creater, 
+ 2. EE builder : Ansibile Buillder = collections, dependencies, ansible core
+ 3. Private automation hub = local on-premisises  hosting EE enviroments or 	collections
+
+DEVELOP, TEST, RUN containerized Ansible content 
+	content creater allows you to zoom in and out of plays.
+	Automatiion content navigator = Scalable Supported playbook and EE  
+	that can run execution levels.
+  
+HOW ANSIBLE AUTOMATION WORKS
+ 1. LOCAL Execution = Network devices, API Endpoints
+ 2. REMMOTE Execution = Linux / Windows Hosts 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

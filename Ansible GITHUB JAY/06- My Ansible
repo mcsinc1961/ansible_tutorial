@@ -1,0 +1,86 @@
+INSTALL APACHE2, UPDATE THE REPOSITORY, ADD PHP FOR APACHE2 not in that order
+___________________________________________________________________
+nano install_apache.yml
+-----------------------------------------------
+---	
+
+- hosts: all		all hostt
+  become: true		sudo 
+  tasks:
+    
+  - name: update reposotory
+    apt:
+      update_cache: yes
+ 
+  - name: install apache2 package
+    apt:		module	
+      name: apache2      
+      state: latest
+      
+  - name: add php support or apache
+    apt:
+      name: libapache2-mod-php
+      state: latest         
+-----------------------------------------------------      
+RUN ANSIBLE PLAYBOOK COMMAND
+ansible-playbook --ask-become-pass install_apache.yml
+_____________________________________________________________________
+REVERSE THE PLAYBOOK remove apache2 in this play book
+nano reverse_apache.yml
+--------------------------------------------------------
+---	
+
+- hosts: all
+  become: true 
+  tasks:
+    
+  - name: update reposotory
+    apt:
+      update_cache: yes
+ 
+  - name: install apache2 package
+    apt:	
+      name: apache2      
+      state: absent
+        
+  - name: add php support or apache
+    apt:
+      name: libapache2-mod-php
+      state: absent
+--------------------------------------------------------------      
+RUN ANSIBLE PLAYBOOK COMMAND
+ansible-playbook --ask-become-pass remove_apache.yml
+
+
+
+__________________________________________________________________________
+				ERROR
+ASK [Gathering Facts] *********************************************************
+fatal: [root@45.79.203.18]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+fatal: [root@170.187.154.239]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+
+				FIX ERROR 				
+sudo apt updaate
+sudo apt-get -y install sshpass
+
+the playbook wont run withoout the sshpass installed on Debian 11
+To REMOVE 	sudo apt-get -y autoremove --purge sshpass
+		
+________________________________________________
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

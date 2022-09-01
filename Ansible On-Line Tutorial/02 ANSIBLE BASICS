@@ -1,0 +1,67 @@
+ANSIBLE BASICS
+ you can put all your var into an INVENTORY directory or put varibles into a GROUP VAR or HOST VAR directory.  Inventory var spific to  connect to devices
+ 
+ ANSIBLE INVENTORY = systems with ip adresses or FQDN ful qualifi domain name
+ 
+ [my server]
+ 10.42.0.1 etc..., 
+ DNS = host.EXAMPLE.COM		NOTE pin DNS first then put a name on it.
+---------------------------------------------------------- 
+ INI STYLE INVENTORY
+ [app1serv]
+ appserver01 ansible-host= 10.42.0.1
+ appserver02 ansible-host= 10.42.0.2 etc...
+ [web]
+ webserver01
+ 
+ [web:vars]
+ appache_listen_port=8080
+ apache_root_path= /var/www/mywebdocs/
+ 
+ [all:vars] 		connect to a device
+ ansible_user=ansible
+ ansible_ssh_private_key_file= /home/ansible/.ssh/id_rsa
+ [-----------------------------------------------------------
+ GOUPS & HIARCHY GROUPS
+ [NASHVILLE]
+ bnaapp01
+ bnaapp02
+ 
+ [atlanta]
+ atlap03
+ atlapp04
+ 
+ [south:children]	chilren everything in group south will include
+ atlanta		antla, nashnille
+ nashville
+ hsvapp05		another playbook
+ 
+ -------------------------------------------------
+ 
+ CONFIGURATION FILE = ansible.cfg file
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
