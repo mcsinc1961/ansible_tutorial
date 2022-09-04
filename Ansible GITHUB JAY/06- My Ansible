@@ -48,7 +48,8 @@ nano reverse_apache.yml
       name: libapache2-mod-php
       state: absent
 --------------------------------------------------------------      
-RUN ANSIBLE PLAYBOOK COMMAND
+RUN ANSIBLE PLAYBOOK COMMAND------------                        INSTALL APCHEE-2 PACKAGE
+ansible-playbook --ask-become-pass install_apache.yml
 ansible-playbook --ask-become-pass remove_apache.yml
 
 
