@@ -50,7 +50,8 @@ nano reverse_apache.yml
 --------------------------------------------------------------      
 RUN ANSIBLE PLAYBOOK COMMAND------------                        INSTALL APCHEE-2 PACKAGE
 ansible-playbook --ask-become-pass install_apache.yml
-ansible-playbook --ask-become-pass remove_apache.yml
+ansible-playbook --ask-become-pass remove_apache.yml   -------    state: absence
+
 
 
 
